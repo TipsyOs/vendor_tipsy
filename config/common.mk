@@ -82,6 +82,9 @@ DEVICE_PACKAGE_OVERLAYS += vendor/tipsy/overlay/common
 # Exclude from RRO
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/tipsy/overlay
 
+# Include CM LatinIME dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/tipsy/overlay/dictionaries
+
 # Squisher Location
 SQUISHER_SCRIPT := vendor/tipsy/tools/squisher
 
