@@ -112,6 +112,9 @@ PRODUCT_PACKAGES += \
     ntfsfix \
     ntfs-3g
 
+# Packages
+PRODUCT_PACKAGES += \
+    SystemDarkTheme
 
 PRODUCT_PACKAGES += \
     charger_res_images
