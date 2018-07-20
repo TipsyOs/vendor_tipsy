@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDarkGZR">@android:color/black</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="ActionBarColor">@android:color/black</color>
+    <color name="NavDrawerColor">@android:color/black</color>
+    <color name="NavDrawerIconTint">#4db6ac</color>
+    <color name="NavDrawerItemTextColor">#f1d744</color>
+    <color name="ROMCardColor">#212121</color>
+    <color name="ROMLinkColor">#f1d744</color>
+    <color name="ROMCardMaintainerColor">#f1d744</color>
+    <color name="DeviceCardColor">#212121</color>
+    <color name="DeviceCardDescColor">#f1d744</color>
+    <color name="DeviceTitleBgColor">#212121</color>
+    <color name="DeviceTitleTextColor">#f1d744</color>
+    <color name="DeviceTitleMenuColor">#f1d744</color>
+    <color name="DeviceFavoriteTint">#ff0000</color>
+    <color name="DeviceNonFavoriteTint">#212121</color>
+    <color name="DeviceBgColor">@android:color/black</color>
+    <color name="DeviceFabBgTint">#f1d744</color>
+    <color name="white">#f1d744</color>
+    <color name="darkcard">@android:color/black</color>
+    <color name="darkbg">@android:color/black</color>
+    <color name="darkcard_1">@android:color/black</color>
+    <color name="darkcard_2">@android:color/darker_gray</color>
+    <color name="red">#ff0000</color>
+    <color name="gzosp">#ff0000</color>
+    <color name="valo">#009688</color>
+    <color name="tesla">#33b5e5</color>
+    <color name="tipsy">#f1d744</color>
+    <color name="validus">#009688</color>
+    <color name="viewBg">@android:color/black</color>
+    <color name="navmenu">@android:color/black</color>
+    <color name="device_title">@android:color/black</color>
+    <color name="tab_indicator_text">@android:color/black</color>
+    <color name="nav_item_bg">@android:color/black</color>
+    <color name="grey_400">#bdbdbd</color>
+    <color name="green_400">#66bb6a</color>
+    <color name="light_green_500">#8bc34a</color>
+    <color name="teal_700">#00796b</color>
+    <color name="teal_300">#4db6ac</color>
+
+
+</resources>

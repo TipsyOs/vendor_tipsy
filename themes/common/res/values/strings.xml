@@ -25,6 +25,7 @@
     <string name="dui_overlay_black">DuiDialogs primary theme: Black</string>
     <string name="settings_overlay_black">Settings primary theme: Black</string>
     <string name="gboard_overlay_black">GBoard primary theme: Black</string>
+    <string name="GZRoms_overlay_black">GZRoms primary theme: Black</string>
 
     <!-- Accent colors -->
     <string name="accent_color_amber">System theme: Amber</string>

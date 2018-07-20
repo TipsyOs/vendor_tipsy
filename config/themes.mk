@@ -7,7 +7,8 @@ PRODUCT_PACKAGES += \
     SystemBlack \
     SettingsBlack \
     DuiBlack \
-    GBoardBlack
+    GBoardBlack \
+    GZRomsBlack
 
 # Accents colors
 PRODUCT_PACKAGES += \
