@@ -49,7 +49,7 @@ check_prereq() {
 if [ ! -r $S/build.prop ]; then
     return 0
 fi
-if ( ! grep -q "^ro.carbon.version=$V.*" $S/build.prop ); then
+if ( ! grep -q "^ro.tipsy.version=$V.*" $S/build.prop ); then
   echo "Not backing up files from incompatible version: $V"
   return 0
 fi

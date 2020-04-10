@@ -39,10 +39,6 @@ PRODUCT_PACKAGES += \
     SimpleGallery \
     ExactCalculator
 
-# SetupWizard
-PRODUCT_PACKAGES += \
-    CarbonSetupWizard
-
 # Turbo
 PRODUCT_PACKAGES += \
     Turbo \
@@ -79,8 +75,8 @@ endif
 
 # Permissions
 PRODUCT_PACKAGES += \
-    privapp-permissions-carbon.xml \
-    privapp-permissions-carbon-product.xml
+    privapp-permissions-tipsy.xml \
+    privapp-permissions-tipsy-product.xml
 
 # Exempt DeskClock from Powersave
 PRODUCT_PACKAGES += \
@@ -92,7 +88,7 @@ PRODUCT_PACKAGES += \
 
 # Hidden API whitelist
 PRODUCT_PACKAGES += \
-    carbon-hiddenapi-package-whitelist.xml
+    tipsy-hiddenapi-package-whitelist.xml
 
 # ThemePicker
 PRODUCT_PACKAGES += \

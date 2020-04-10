@@ -1,11 +1,7 @@
 # Apply it to build.prop
 ADDITIONAL_BUILD_PROPERTIES += \
-    ro.modversion=CarbonROM-$(CARBON_VERSION) \
-    ro.carbon.version=$(CARBON_VERSION) \
-    ro.carbon.build.version=$(CARBON_REVISION) \
-    ro.romstats.url=https://stats.carbonrom.org \
-    ro.romstats.name=CarbonROM \
-    ro.romstats.version=$(CARBON_VERSION)
+    ro.modversion=Tipsy-$(TIPSY_VERSION) \
+    ro.tipsy.version=$(TIPSY_VERSION)
 
 # Build fingerprint
 ifneq ($(BUILD_FINGERPRINT),)

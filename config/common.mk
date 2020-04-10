@@ -1,5 +1,5 @@
-PRODUCT_BRAND ?= CarbonROM
-CARBON_BUILD := true
+PRODUCT_BRAND ?= Tipsy
+TIPSY_BUILD := true
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -29,25 +29,25 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/carbon/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/carbon/prebuilt/bin/50-hosts.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-hosts.sh \
-    vendor/carbon/prebuilt/bin/blacklist:$(TARGET_COPY_OUT_SYSTEM)/addon.d/blacklist
+    vendor/tipsy/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/tipsy/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/tipsy/prebuilt/bin/50-hosts.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-hosts.sh \
+    vendor/tipsy/prebuilt/bin/blacklist:$(TARGET_COPY_OUT_SYSTEM)/addon.d/blacklist
 
 ifeq ($(AB_OTA_UPDATER),true)
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
-    vendor/carbon/prebuilt/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
-    vendor/carbon/prebuilt/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
+    vendor/tipsy/prebuilt/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
+    vendor/tipsy/prebuilt/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
+    vendor/tipsy/prebuilt/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 endif
 
-# carbon init
+# tipsy init
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/etc/init.carbon.rc:root/init.carbon.rc
+    vendor/tipsy/prebuilt/etc/init.tipsy.rc:root/init.tipsy.rc
 
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/etc/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
+    vendor/tipsy/prebuilt/etc/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
 
 # Enable SIP and VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -55,36 +55,36 @@ PRODUCT_COPY_FILES += \
 
 # Charging sounds
 PRODUCT_COPY_FILES += \
-    vendor/carbon/sounds/BatteryPlugged.ogg:$(TARGET_COPY_OUT_SYSTEM)/media/audio/ui/BatteryPlugged.ogg \
-    vendor/carbon/sounds/BatteryPlugged_48k.ogg:$(TARGET_COPY_OUT_SYSTEM)/media/audio/ui/BatteryPlugged_48k.ogg
+    vendor/tipsy/sounds/BatteryPlugged.ogg:$(TARGET_COPY_OUT_SYSTEM)/media/audio/ui/BatteryPlugged.ogg \
+    vendor/tipsy/sounds/BatteryPlugged_48k.ogg:$(TARGET_COPY_OUT_SYSTEM)/media/audio/ui/BatteryPlugged_48k.ogg
 
 # Enforce privapp-permissions whitelist
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
 
 # Additional packages
--include vendor/carbon/config/packages.mk
+-include vendor/tipsy/config/packages.mk
 
 # Versioning
--include vendor/carbon/config/version.mk
+-include vendor/tipsy/config/version.mk
 
 # SELinux Policy
--include vendor/carbon/sepolicy/sepolicy.mk
+-include vendor/tipsy/sepolicy/sepolicy.mk
 
 # Themes and Theme overlays
 include vendor/themes/themes.mk
 
 # Add our overlays
-DEVICE_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
+DEVICE_PACKAGE_OVERLAYS += vendor/tipsy/overlay/common
 
 # Exclude from RRO
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/carbon/overlay
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/tipsy/overlay
 
 # Include CM LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/tipsy/dictionaries
 
 # Squisher Location
-SQUISHER_SCRIPT := vendor/carbon/tools/squisher
+SQUISHER_SCRIPT := vendor/tipsy/tools/squisher
 
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false

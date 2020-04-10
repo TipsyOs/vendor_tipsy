@@ -15,15 +15,15 @@
 # limitations under the License.
 
 # Include board/platform macros
-include vendor/carbon/build/core/utils.mk
+include vendor/tipsy/build/core/utils.mk
 
 # Include vendor platform definitions
-include vendor/carbon/build/core/vendor/*.mk
+include vendor/tipsy/build/core/vendor/*.mk
 
 # Rules for QCOM targets
-include $(TOPDIR)vendor/carbon/build/core/qcom_target.mk
+include $(TOPDIR)vendor/tipsy/build/core/qcom_target.mk
 
-BUILD_RRO_SYSTEM_PACKAGE := $(TOPDIR)vendor/carbon/build/core/system_rro.mk
+BUILD_RRO_SYSTEM_PACKAGE := $(TOPDIR)vendor/tipsy/build/core/system_rro.mk
 
 # Filter out duplicates
 define uniq__dx

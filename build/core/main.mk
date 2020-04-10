@@ -1,2 +1,2 @@
-# Include CarbonROM versioning
-include $(TOPDIR)vendor/carbon/build/core/main_version.mk
+# Include Tipsy versioning
+include $(TOPDIR)vendor/tipsy/build/core/main_version.mk

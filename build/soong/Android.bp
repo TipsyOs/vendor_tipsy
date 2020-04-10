@@ -1,6 +1,6 @@
 bootstrap_go_package {
-    name: "soong-carbon",
-    pkgPath: "carbon/soong/android",
+    name: "soong-tipsy",
+    pkgPath: "tipsy/soong/android",
     srcs: [
         "android/config.go",
         "android/variable.go",
@@ -8,8 +8,8 @@ bootstrap_go_package {
 }
 
 bootstrap_go_package {
-    name: "soong-carbon-generator",
-    pkgPath: "carbon/soong/generator",
+    name: "soong-tipsy-generator",
+    pkgPath: "tipsy/soong/generator",
     deps: [
         "blueprint",
         "blueprint-pathtools",
@@ -24,7 +24,7 @@ bootstrap_go_package {
     pluginFor: ["soong_build"],
 }
 
-carbon_generator {
+tipsy_generator {
     name: "generated_kernel_includes",
 
     // The headers make command

@@ -1,7 +1,7 @@
 # Common settings and files
--include vendor/carbon/config/common.mk
+-include vendor/tipsy/config/common.mk
 
 # Add tablet overlays
-DEVICE_PACKAGE_OVERLAYS += vendor/carbon/overlay/common_tablet
+DEVICE_PACKAGE_OVERLAYS += vendor/carbon/tipsy/common_tablet
 
 PRODUCT_CHARACTERISTICS := tablet

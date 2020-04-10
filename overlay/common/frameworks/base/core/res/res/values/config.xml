@@ -62,7 +62,7 @@
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService</item>
     </string-array>
 
-    <string name="config_mms_user_agent">CarbonROM</string>
+    <string name="config_mms_user_agent">Tipsy</string>
     <string name="config_mms_user_agent_profile_url">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
 
     <!--  Whether Multiuser UI should be shown -->
@@ -79,7 +79,7 @@
 
     <!-- System font packages (overlay in vendor) -->
     <string-array name="config_fontPackages" translatable="false">
-        <item>org.carbonrom.fonts</item>
+        <item>org.tipsyrom.fonts</item>
     </string-array>
 
     <!-- Flag indicating whether we should enable smart battery. -->
