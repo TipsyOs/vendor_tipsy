@@ -45,7 +45,7 @@ $(TARGET_GENERATED_BOOTANIMATION): $(SOONG_ZIP)
 	    mkdir -p $(INTERMEDIATES)/part$$part_cnt; \
 	done; \
 	prebuilts/tools-lineage/${HOST_OS}-x86/bin/mogrify -resize $$RESOLUTION -colors 250 $(INTERMEDIATES)/*/*.png; \
-	echo "$$IMAGESCALEWIDTH $$IMAGESCALEWIDTH 30" > $(INTERMEDIATES)/desc.txt; \
+	echo "$$IMAGESCALEWIDTH $$IMAGESCALEWIDTH 24" > $(INTERMEDIATES)/desc.txt; \
 	cat vendor/tipsy/bootanimation/desc.txt >> $(INTERMEDIATES)/desc.txt
 	$(hide) $(SOONG_ZIP) -L 0 -o $(TARGET_GENERATED_BOOTANIMATION) -C $(INTERMEDIATES) -D $(INTERMEDIATES)
 
