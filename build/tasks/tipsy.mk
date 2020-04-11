@@ -57,15 +57,33 @@ tipsy: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(TIPSY_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(TIPSY_TARGET_PACKAGE) > $(TIPSY_TARGET_PACKAGE).md5sum
 	@echo ""
-	@echo -e ${CL_YLW}"════════════════════════════════════════════════════════════════════════════════"${CL_RST}
-	@echo -e ${CL_BLU}" ██████╗ █████╗ ██████╗ ██████╗  ██████╗ ███╗   ██╗ ██████╗  ██████╗ ███╗   ███╗"${CL_RST}
-	@echo -e ${CL_BLU}"██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔═══██╗████╗  ██║ ██╔══██╗██╔═══██╗████╗ ████║"${CL_RST}
-	@echo -e ${CL_BLU}"██║     ███████║██████╔╝██████╔╝██║   ██║██╔██╗ ██║ ██████╔╝██║   ██║██╔████╔██║"${CL_RST}
-	@echo -e ${CL_BLU}"██║     ██╔══██║██╔══██╗██╔══██╗██║   ██║██║╚██╗██║ ██╔══██╗██║   ██║██║╚██╔╝██║"${CL_RST}
-	@echo -e ${CL_BLU}"╚██████╗██║  ██║██║  ██║██████╔╝╚██████╔╝██║ ╚████║ ██║  ██║╚██████╔╝██║ ╚═╝ ██║"${CL_RST}
-	@echo -e ${CL_BLU}" ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚═╝  ╚═══╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝"${CL_RST}
-	@echo -e ${CL_RED}"                                   tipsyrom.org                                "${CL_RST}
-	@echo -e ${CL_YLW}"════════════════════════════════════════════════════════════════════════════════"${CL_RST}
+	@echo -e ${CL_YLW}""${CL_YLW}
+	@echo -e ${CL_YLW}"                     .sssssssss."${CL_YLW}
+	@echo -e ${CL_YLW}"                .sssssssssssssssssss"${CL_YLW}
+	@echo -e ${CL_YLW}"              ssssssssssssssssssssssss"${CL_YLW}
+	@echo -e ${CL_YLW}"           ssssssssssssssssssssssssssss"${CL_YLW}
+	@echo -e ${CL_YLW}"            @@sssssssssssssssssssssss@ss"${CL_YLW}
+	@echo -e ${CL_YLW}"            |s@@@@sssssssssssssss@@@@s|s"${CL_YLW}
+	@echo -e ${CL_YLW}"     _______|sssss@@@@@sssss@@@@@sssss|s"${CL_YLW}
+	@echo -e ${CL_YLW}"    /         sssssssss@sssss@sssssssss|s"${CL_YLW}
+	@echo -e ${CL_YLW}"   /  .------+.ssssssss@sssss@ssssssss.|"${CL_YLW}
+	@echo -e ${CL_YLW}"  /  /       |...sssssss@sss@sssssss...|"${CL_YLW}
+	@echo -e ${CL_YLW}" |  |        |.......sss@sss@ssss......|"${CL_YLW}
+	@echo -e ${CL_YLW}" |  |        |..........s@ss@sss.......|"${CL_YLW}
+	@echo -e ${CL_YLW}" |  |        |...........@ss@..........|"${CL_YLW}
+	@echo -e ${CL_YLW}"  \  \       |............ss@..........|"${CL_YLW}
+	@echo -e ${CL_YLW}"   \  '------+...........ss@...........|"${CL_YLW}
+	@echo -e ${CL_YLW}"    \________ .........................|"${CL_YLW}
+	@echo -e ${CL_YLW}"             |.........................|"${CL_YLW}
+	@echo -e ${CL_YLW}"            /...........................\ "${CL_YLW}
+	@echo -e ${CL_YLW}"           |.............................|"${CL_YLW}
+	@echo -e ${CL_YLW}"              |.......................|"${CL_YLW}
+	@echo -e ${CL_YLW}"                  |...............|"${CL_YLW}
+	@echo -e ${CL_YLW}"                    ____________"${CL_YLW}
+	@echo -e ${CL_YLW}""${CL_YLW}${CL_RST}
+	@echo -e ${CL_GRN}"             Congratz, u just got Tipsy!"${CL_GRN}
+	@echo -e ${CL_GRN}"                      G   Z   R"${CL_GRN}
+	@echo -e ${CL_GRN}""${CL_GRN}${CL_RST}
 	@echo -e ${CL_CYN}"Package zip: "${CL_MAG} $(TIPSY_TARGET_PACKAGE)                                 ${CL_RST}
 	@echo -e ${CL_CYN}"Package md5: "${CL_MAG}" `cat $(TIPSY_TARGET_PACKAGE).md5sum | cut -d ' ' -f 1`"${CL_RST}
 	@echo -e ${CL_CYN}"Package size:"${CL_MAG}" `du -h $(TIPSY_TARGET_PACKAGE) | cut -f 1`            "${CL_RST}
