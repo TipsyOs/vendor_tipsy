@@ -39,6 +39,10 @@ PRODUCT_PACKAGES += \
     SimpleGallery \
     ExactCalculator
 
+# SetupWizard
+PRODUCT_PACKAGES += \
+    TipsySetupWizard
+
 # Turbo
 PRODUCT_PACKAGES += \
     Turbo \
