@@ -23,6 +23,9 @@ include vendor/tipsy/build/core/vendor/*.mk
 # Rules for QCOM targets
 include $(TOPDIR)vendor/tipsy/build/core/qcom_target.mk
 
+# We modify several neverallows, so let the build proceed
+SELINUX_IGNORE_NEVERALLOWS := true
+
 BUILD_RRO_SYSTEM_PACKAGE := $(TOPDIR)vendor/tipsy/build/core/system_rro.mk
 
 # Filter out duplicates
