@@ -35,7 +35,6 @@ PRODUCT_PACKAGES += \
     SearchLauncherQuickStep \
     Jelly \
     VanillaMusic \
-    CarbonDelta \
     SimpleGallery \
     ExactCalculator
 
