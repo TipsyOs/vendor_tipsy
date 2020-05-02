@@ -80,7 +80,7 @@ include vendor/themes/themes.mk
 DEVICE_PACKAGE_OVERLAYS += vendor/tipsy/overlay/common
 
 # Exclude from RRO
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/tipsy/overlay/common
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/tipsy/overlay
 
 # Squisher Location
 SQUISHER_SCRIPT := vendor/tipsy/tools/squisher
