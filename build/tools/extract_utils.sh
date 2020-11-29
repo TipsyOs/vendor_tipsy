@@ -68,15 +68,15 @@ function setup_vendor() {
         exit 1
     fi
 
-    export GZOSP_ROOT="$3"
-    if [ ! -d "$GZOSP_ROOT" ]; then
-        echo "\$GZOSP_ROOT must be set and valid before including this script!"
+    export TIPSY_ROOT="$3"
+    if [ ! -d "$TIPSY_ROOT" ]; then
+        echo "\$TIPSY_ROOT must be set and valid before including this script!"
         exit 1
     fi
 
     export OUTDIR=vendor/"$VENDOR"/"$DEVICE"
-    if [ ! -d "$GZOSP_ROOT/$OUTDIR" ]; then
-        mkdir -p "$GZOSP_ROOT/$OUTDIR"
+    if [ ! -d "$TIPSY_ROOT/$OUTDIR" ]; then
+        mkdir -p "$TIPSY_ROOT/$OUTDIR"
     fi
 
     VNDNAME="$6"
@@ -84,10 +84,10 @@ function setup_vendor() {
         VNDNAME="$DEVICE"
     fi
 
-    export PRODUCTMK="$GZOSP_ROOT"/"$OUTDIR"/"$VNDNAME"-vendor.mk
-    export ANDROIDBP="$GZOSP_ROOT"/"$OUTDIR"/Android.bp
-    export ANDROIDMK="$GZOSP_ROOT"/"$OUTDIR"/Android.mk
-    export BOARDMK="$GZOSP_ROOT"/"$OUTDIR"/BoardConfigVendor.mk
+    export PRODUCTMK="$TIPSY_ROOT"/"$OUTDIR"/"$VNDNAME"-vendor.mk
+    export ANDROIDBP="$TIPSY_ROOT"/"$OUTDIR"/Android.bp
+    export ANDROIDMK="$TIPSY_ROOT"/"$OUTDIR"/Android.mk
+    export BOARDMK="$TIPSY_ROOT"/"$OUTDIR"/BoardConfigVendor.mk
 
     if [ "$4" == "true" ] || [ "$4" == "1" ]; then
         COMMON=1
@@ -936,11 +936,11 @@ function write_blueprint_header() {
     fi
 
     if [ $BLUEPRINT_INITIAL_COPYRIGHT_YEAR -eq $YEAR ]; then
-        printf " * Copyright (C) $YEAR The GZOSP Project\n" >> $1
+        printf " * Copyright (C) $YEAR The TIPSY Project\n" >> $1
     elif [ $BLUEPRINT_INITIAL_COPYRIGHT_YEAR -le 2019 ]; then
-        printf " * Copyright (C) 2019-$YEAR The GZOSP Project\n" >> $1
+        printf " * Copyright (C) 2019-$YEAR The TIPSY Project\n" >> $1
     else
-        printf " * Copyright (C) $BLUEPRINT_INITIAL_COPYRIGHT_YEAR-$YEAR The GZOSP Project\n" >> $1
+        printf " * Copyright (C) $BLUEPRINT_INITIAL_COPYRIGHT_YEAR-$YEAR The TIPSY Project\n" >> $1
     fi
 
     cat << EOF >> $1
@@ -989,16 +989,16 @@ function write_makefile_header() {
             printf "# Copyright (C) 2016 The CyanogenMod Project\n" > $1
         fi
         if [ $YEAR -eq 2017 ]; then
-            printf "# Copyright (C) 2017 The GZOSP Project\n" >> $1
+            printf "# Copyright (C) 2017 The TIPSY Project\n" >> $1
         elif [ $INITIAL_COPYRIGHT_YEAR -eq $YEAR ]; then
-            printf "# Copyright (C) $YEAR The GZOSP Project\n" >> $1
+            printf "# Copyright (C) $YEAR The TIPSY Project\n" >> $1
         elif [ $INITIAL_COPYRIGHT_YEAR -le 2017 ]; then
-            printf "# Copyright (C) 2017-$YEAR The GZOSP Project\n" >> $1
+            printf "# Copyright (C) 2017-$YEAR The TIPSY Project\n" >> $1
         else
-            printf "# Copyright (C) $INITIAL_COPYRIGHT_YEAR-$YEAR The GZOSP Project\n" >> $1
+            printf "# Copyright (C) $INITIAL_COPYRIGHT_YEAR-$YEAR The TIPSY Project\n" >> $1
         fi
     else
-        printf "# Copyright (C) $YEAR The GZOSP Project\n" > $1
+        printf "# Copyright (C) $YEAR The TIPSY Project\n" > $1
     fi
 
     cat << EOF >> $1
@@ -1243,7 +1243,7 @@ function get_file() {
 # Convert apk|jar .odex in the corresposing classes.dex
 #
 function oat2dex() {
-    local GZOSP_TARGET="$1"
+    local TIPSY_TARGET="$1"
     local OEM_TARGET="$2"
     local SRC="$3"
     local TARGET=
@@ -1251,16 +1251,16 @@ function oat2dex() {
     local HOST="$(uname | tr '[:upper:]' '[:lower:]')"
 
     if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
-        export BAKSMALIJAR="$GZOSP_ROOT"/prebuilts/tools-gzosp/common/smali/baksmali.jar
-        export SMALIJAR="$GZOSP_ROOT"/prebuilts/tools-gzosp/common/smali/smali.jar
+        export BAKSMALIJAR="$TIPSY_ROOT"/prebuilts/tools-gzosp/common/smali/baksmali.jar
+        export SMALIJAR="$TIPSY_ROOT"/prebuilts/tools-gzosp/common/smali/smali.jar
     fi
 
     if [ -z "$VDEXEXTRACTOR" ]; then
-        export VDEXEXTRACTOR="$GZOSP_ROOT"/prebuilts/tools-gzosp/${HOST}-x86/bin/vdexExtractor
+        export VDEXEXTRACTOR="$TIPSY_ROOT"/prebuilts/tools-gzosp/${HOST}-x86/bin/vdexExtractor
     fi
 
     if [ -z "$CDEXCONVERTER" ]; then
-        export CDEXCONVERTER="$GZOSP_ROOT"/prebuilts/tools-gzosp/${HOST}-x86/bin/compact_dex_converter
+        export CDEXCONVERTER="$TIPSY_ROOT"/prebuilts/tools-gzosp/${HOST}-x86/bin/compact_dex_converter
     fi
 
     # Extract existing boot.oats to the temp folder

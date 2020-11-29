@@ -27,7 +27,7 @@ WORKING_DIR=$( cd $( dirname $( readlink -f "${BASH_SOURCE[0]}" ) )/../../.. && 
 BRANCH=android-${1}
 
 # Manifest branch
-GZOSP_MANIFEST=gzosp.xml
+GZOSP_MANIFEST=tipsy.xml
 
 # Google source url
 REPO=https://android.googlesource.com/platform/

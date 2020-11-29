@@ -15,11 +15,11 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/gzosp_arm.mk \
-    $(LOCAL_DIR)/gzosp_arm64.mk \
-    $(LOCAL_DIR)/gzosp_x86.mk
+    $(LOCAL_DIR)/tipsy_arm.mk \
+    $(LOCAL_DIR)/tipsy_arm64.mk \
+    $(LOCAL_DIR)/tipsy_x86.mk
 
 COMMON_LUNCH_CHOICES := \
-    gzosp_arm-userdebug \
-    gzosp_arm64-userdebug \
-    gzosp_x86-userdebug
+    tipsy_arm-userdebug \
+    tipsy_arm64-userdebug \
+    tipsy_x86-userdebug
